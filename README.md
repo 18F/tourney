@@ -27,7 +27,7 @@ WORKER_HOST_2=hosttwo.foo.com
 # ...
 ```
 
-The environment variables are of the format `<base>_<n>`.
+The environment variables are of the format `<base>_<n>`, where `n >= 0`.
 
 #### `Tourney.fetch(base)`
 
@@ -38,6 +38,8 @@ Tourney.fetch('WORKER_HOST') # => 'hosttwo.foo.com'
 Tourney.fetch('WORKER_HOST') # => 'hostzero.foo.com'
 # ...
 ```
+
+Note that you don't have to specify how many `WORKER_HOST`s are available from your code – Tourney will figure it out!
 
 ### Grouped
 
@@ -51,7 +53,7 @@ SOME_API_SECRET_1=secretone
 # ...
 ```
 
-where the variable names are of the format `<base>_<suffix>_<n>`. Note there can be any number of `base`s, `suffix`es, and groups (`n >= 0`).
+where the variable names are of the format `<base>_<suffix>_<n>`. Note there can be any number of `base`s, `suffix`es, and groups.
 
 #### `Tourney.fetch_group(base)`
 
