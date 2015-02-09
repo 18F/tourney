@@ -67,3 +67,13 @@ credentials['SECRET'] # = > 'secretone'
 ```
 
 Each call to `.fetch_group` would then pull up a new random group of key+secret pairs, where the return value is a hash with the `suffix`es as the keys.
+
+## FAQ
+
+##### Do the numbers have to start at `0`? What if I'm missing a number?
+
+The numbering scheme is really only for grouping values... the numbers themselves are arbitrary, so it doesn't matter in either case.
+
+##### What if I leave out a `suffix` for one of the groups?
+
+That key/value will simply be missing from the returned hash. Tourney **does not** do any validation that all `suffix`es are present for all groups.
