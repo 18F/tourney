@@ -61,7 +61,7 @@ You then call `.fetch_group` with the `base`:
 
 ```ruby
 credentials = Tourney.fetch_group('SOME_API')
-credentials # => {'KEY' => 'keyone', 'SECRET' => 'secretone'}
+credentials # => {'_n' => 1, 'KEY' => 'keyone', 'SECRET' => 'secretone'}
 credentials['KEY'] # => 'keyone'
 credentials['SECRET'] # = > 'secretone'
 ```
